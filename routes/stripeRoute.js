@@ -68,8 +68,8 @@ router.post(
         payment_method_types: ["card"],
         line_items,
         customer_email: req.user.email,
-        success_url: `${process.env.CLIENT_URL}checkout/success`,
-        cancel_url: `${process.env.CLIENT_URL}`,
+        success_url: `https://shoply-officialjyotsna.vercel.app/checkout/success`,
+        cancel_url: `https://shoply-officialjyotsna.vercel.app/`,
       });
       let subtotal = items.reduce((st, item) => st + item.price * item.qty, 0);
       let taxPer = subtotal * 0.1;
